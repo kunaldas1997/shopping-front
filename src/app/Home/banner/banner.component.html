@@ -1,0 +1,16 @@
+<div class="banner" [style.border]="styleString">
+   <div class="banner-title">
+      <p>{{banner.title}}</p>
+   </div>
+   <div class="banner-sub">
+      <p>{{banner.subtitle}}</p>
+   </div>
+   <div class="prod-img">
+      <img [src]="banner.imageUrl" [alt]="banner.altText" />
+      <div class="move-cat">
+         <div class="submit-back">
+            <p>Starts at {{banner.price}}</p>
+         </div>
+      </div>
+   </div>
+</div>

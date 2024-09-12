@@ -1,0 +1,25 @@
+<div class="login-container">
+   <div class="login">
+      <span class="login-title">ShopNow</span>
+      <form [formGroup]="login">
+         <div class="email-section">
+            <label for="email">
+               <span>Email</span>
+            </label>
+            <input type="email" formControlName="email" id="email">
+         </div>
+         <div class="pass-section">
+            <label for="pass">
+               <span>Password</span>
+            </label>
+            <input type="password" formControlName="password" id="pass">
+         </div>
+         <div class="submit-btn" (click)="onSubmit()">
+            Login
+         </div>
+         <div class="signup-btn">
+            <a [routerLink]="'/signup'"> Don't have account? Sign Up!</a>
+         </div>
+      </form>
+   </div>
+</div>

@@ -1,0 +1,32 @@
+<div class="category-section">
+   <div class="chairs" (click)="getThisCat('Chairs')">
+      <fa-icon [icon]="['fas', 'chair']"></fa-icon>
+      <div class="sub">
+         <span>Chairs</span>
+      </div>
+   </div>
+   <div class="tables" (click)="getThisCat('Tables')">
+      <fa-icon [icon]="['fas', 'table']"></fa-icon>
+      <div class="sub">
+         <span>Tables</span>
+      </div>
+   </div>
+   <div class="comp-tables" (click)="getThisCat('Computer Desks')">
+      <fa-icon [icon]="['fas', 'computer']"></fa-icon>
+      <div class="sub">
+         <span>Computers</span>
+      </div>
+   </div>
+   <div class="shelves" (click)="getThisCat('Shelves')">
+      <fa-icon [icon]="['fas', 'bars-progress']"></fa-icon>
+      <div class="sub">
+         <span>Shelves</span>
+      </div>
+   </div>
+   <div class="misc" (click)="getThisCat('')">
+      <fa-icon [icon]="['fas', 'paperclip']"></fa-icon>
+      <div class="sub">
+         <span>Misc</span>
+      </div>
+   </div>
+</div>

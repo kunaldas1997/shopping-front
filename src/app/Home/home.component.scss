@@ -1,0 +1,161 @@
+@use "../../styles.scss";
+
+// Common Styles
+.carousel-container {
+   position: relative;
+
+   .carousel-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: transform 0.5s ease-in-out;
+      width: 100%;
+      will-change: transform;
+
+   }
+
+   .carousel-item {
+      min-width: 100%;
+      box-sizing: border-box;
+      text-align: center;
+      display: none;
+      height: 100%;
+
+      &.active {
+         display: block;
+      }
+   }
+
+
+}
+
+@media screen and (min-width: 1000px) {
+   .carousel-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: styles.$primay-color-1;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      font-size: clamp(1rem, 3vw, 3rem);
+   }
+
+   .prev {
+      left: 1rem;
+
+   }
+
+   .next {
+      right: 1rem;
+   }
+
+   .bannerSection {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: styles.$primay-color-1;
+      height: 92.5vh;
+
+      .carousel-pagination {
+         padding: 20px;
+         transform: translateX(-50%);
+         display: flex;
+         justify-content: center;
+         margin-left: calc(1rem + 85px);
+
+      }
+
+      >.carousel-container {
+         width: 100%;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-content: center;
+         height: 100vh;
+      }
+   }
+
+
+   .carousel-dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+         background-color: #717171;
+      }
+   }
+}
+
+@media screen and (max-width: 999px) {
+
+   .carousel-control {
+      position: absolute;
+      bottom: 10%;
+      transform: translateY(-50%);
+      color: styles.$primay-color-1;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      font-size: clamp(1rem, 3vw, 3rem);
+   }
+
+   .prev {
+      left: 1rem;
+   }
+
+   .next {
+      right: 1rem;
+   }
+
+   .bannerSection {
+
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      color: styles.$primay-color-1;
+      background-color: styles.$secondary-color-2;
+
+      .carousel-pagination {
+         padding: 20px;
+         transform: translateX(-50%);
+         display: flex;
+         justify-content: center;
+         margin-left: calc(1rem + 85px);
+
+      }
+   }
+
+
+   .carousel-dot {
+      height: 12px;
+      width: 12px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &.active {
+         background-color: #717171;
+      }
+   }
+
+}

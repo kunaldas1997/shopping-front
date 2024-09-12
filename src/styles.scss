@@ -1,0 +1,46 @@
+$primay-color-1: #f8f8f8;
+$secondary-color-2: #1E2A5E;
+$color-1: #55679C;
+$color-2: #7C93C3;
+
+$font-family: "Quicksand", sans-serif;
+
+body {
+   font-family: $font-family;
+   margin: 0 auto;
+   user-select: none;
+   padding: 0;
+   background-color: $primay-color-1;
+
+   a {
+      text-decoration: none;
+
+      &:active {
+         color: $primay-color-1;
+      }
+
+      &:visited {
+         color: $primay-color-1;
+      }
+
+      &:hover {
+         color: $primay-color-1;
+      }
+   }
+}
+
+.stop-scroll {
+   overflow-y: hidden;
+}
+
+::-webkit-scrollbar {
+   width: 5px;
+ }
+
+ ::-webkit-scrollbar-track {
+   background: #f1f1f149;
+ }
+
+ ::-webkit-scrollbar-thumb {
+   background: #888;
+ }

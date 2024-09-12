@@ -1,0 +1,187 @@
+@use '../../../styles.scss';
+
+@media screen and (min-width: 1000px) {
+   footer {
+      background-color: styles.$secondary-color-2;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: 2rem;
+      color: white;
+
+      .brand-name {
+         height: 100%;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         font-size: 3rem;
+         width: 33vw;
+         font-weight: 600;
+      }
+
+      .find-us {
+         width: 33vw;
+         height: 100%;
+
+         >p {
+            font-size: 1.5rem;
+            font-weight: 400;
+         }
+
+         .address {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.25rem;
+         }
+
+         .social {
+
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: flex-start;
+
+            ul {
+               list-style: none;
+               display: inline-flex;
+               justify-content: flex-start;
+               padding: 0;
+
+               li {
+                  margin-right: 1.5rem;
+
+                  fa-icon {
+                     font-size: 1.5rem;
+                  }
+               }
+            }
+         }
+
+
+      }
+
+      .misc {
+         width: 33vw;
+         height: auto;
+
+         >p {
+            font-size: 1.5rem;
+            font-weight: 400;
+         }
+
+         .other {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.25rem;
+
+            ul {
+               list-style: none;
+               padding-left: 0;
+               line-height: 2rem;
+               margin: 0;
+            }
+         }
+
+         .empt {
+            content: '';
+            height: 5vh;
+         }
+      }
+   }
+}
+
+
+@media screen and (max-width:999px) {
+   footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: left;
+      padding: 2rem;
+      color: white;
+      background-color: styles.$secondary-color-2;
+
+      .brand-name {
+         font-size: 2rem;
+         display: flex;
+         flex-direction: row;
+         justify-content: center;
+         align-items: center;
+         font-weight: 600;
+      }
+
+      .find-us {
+         height: 100%;
+
+         >p {
+            font-size: 1.5rem;
+            font-weight: 400;
+         }
+
+         .address {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            font-size: 1.25rem;
+         }
+
+         .social {
+
+
+
+            ul {
+               list-style: none;
+               display: inline-flex;
+               justify-content: flex-start;
+               padding: 0;
+
+               li {
+                  margin-right: 1.5rem;
+
+                  fa-icon {
+                     font-size: 1.5rem;
+                  }
+               }
+            }
+
+         }
+
+      }
+
+      .misc {
+         height: auto;
+
+         >p {
+            font-size: 1.5rem;
+            font-weight: 400;
+         }
+
+         .other {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            font-size: 1.25rem;
+
+            ul {
+               list-style: none;
+               padding-left: 0;
+               line-height: 2rem;
+               margin: 0;
+            }
+         }
+
+         // .empt {
+         //    content: '';
+         //    height: 5vh;
+         // }
+      }
+   }
+}

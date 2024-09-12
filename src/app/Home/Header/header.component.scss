@@ -1,0 +1,258 @@
+@use "../../../styles.scss";
+
+// common
+
+
+@media screen and (min-width: 1000px) {
+
+   .mobile-only {
+      display: none;
+   }
+
+   header {
+      height: 7%;
+      width: 100%;
+      background-color: styles.$secondary-color-2;
+
+      .header-content {
+
+         color: styles.$primay-color-1;
+         font-size: 2.34rem;
+         font-weight: 600;
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between;
+         align-self: center;
+         padding: 0 1rem;
+
+         #title {
+            width: 25%;
+
+            p {
+               width: 50%;
+
+            }
+         }
+
+         .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            align-self: center;
+            height: 16px;
+            font-size: 1rem;
+            font-weight: 500;
+
+            ul {
+               padding: 0;
+
+               list-style: none;
+
+               li {
+                  display: inline;
+                  padding: 1rem;
+                  margin: 0rem 1rem 0rem 0rem;
+               }
+            }
+         }
+
+         .user-acc {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 25%;
+
+            .outer {
+               height: 40px;
+               width: 40px;
+               border-radius: 25px;
+               border: 0.05rem solid styles.$primay-color-1;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding: 0.05rem;
+
+               fa-icon {
+                  font-size: 1rem;
+                  color: styles.$primay-color-1;
+               }
+
+            }
+
+            .shopping {
+               height: 40px;
+               width: 40px;
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+               border: 0.05rem solid styles.$primay-color-1;
+               border-radius: 25px;
+               font-size: 1.2rem;
+               margin-right: 1rem;
+               padding: 0.05rem;
+            }
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 999px) {
+
+   a {
+      text-decoration: none;
+
+      &:active {
+         color: styles.$secondary-color-2;
+      }
+
+      &:visited {
+         color: styles.$secondary-color-2;
+      }
+
+      &:hover {
+         color: styles.$secondary-color-2;
+      }
+   }
+   .non-mobile {
+      display: none;
+   }
+
+   header {
+      height: 7%;
+      width: 100%;
+      background-color: styles.$secondary-color-2;
+
+
+      .mobile-only {
+
+         padding: 1rem;
+
+         .header-content {
+
+            color: styles.$primay-color-1;
+            font-size: 1.25rem;
+            font-weight: 600;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            align-self: center;
+
+            #m-title {
+               width: 25%;
+
+               p {
+                  width: 50%;
+
+               }
+            }
+
+            .menu {
+               display: flex;
+               flex-direction: row;
+               justify-content: center;
+               align-items: center;
+
+               fa-icon {
+                  font-size: 0.9rem;
+                  color: styles.$primay-color-1;
+               }
+
+               .shopping {
+                  margin-right: 1rem;
+               }
+
+               .collapsible {
+                  width: 0;
+                  height: 100%;
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  background-color: white;
+                  overflow: hidden;
+                  transition: width 0.25s ease-in-out;
+                  z-index: 2;
+
+
+                  &.active {
+                     width: 100vw;
+                     height: 100vh;
+
+                     .user-acc {
+                        padding: 1rem;
+                        transition: padding 0.25s ease-in-out;
+                        color: styles.$secondary-color-2;
+                     }
+                  }
+
+                  .user-acc {
+                     padding: 0;
+                     transition: padding 0.25s ease-in-out;
+
+                     .outer {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: center;
+                        width: 100%;
+                        margin-top: 1.2rem;
+
+                        .user {
+                           padding: 1rem;
+                           display: flex;
+                           flex-direction: row;
+                           align-items: center;
+                           justify-content: center;
+
+                           .ic-back {
+                              height: 40px;
+                              width: 40px;
+                              border-radius: 25px;
+                              border: 0.05rem solid styles.$secondary-color-2;
+                              display: flex;
+                              flex-direction: row;
+                              justify-content: center;
+                              align-items: center;
+                              margin-right: 1rem;
+                              font-size: 1rem;
+                           }
+
+                           fa-icon {
+                              padding: 0.5rem;
+                              color: styles.$secondary-color-2;
+                           }
+                        }
+
+                        .close_panel {
+                           padding: 1rem;
+
+                           fa-icon {
+                              color: styles.$secondary-color-2;
+                           }
+                        }
+                     }
+
+                     ul {
+                        padding: 1.5rem;
+                        list-style: none;
+
+                        li {
+                           display: block;
+                           margin: 0rem 1rem 0rem 0rem;
+                           width: 100%;
+                           padding: 1rem 0;
+
+
+                        }
+                     }
+                  }
+               }
+            }
+         }
+      }
+   }
+
+}

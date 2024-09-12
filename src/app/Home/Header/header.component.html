@@ -1,0 +1,64 @@
+<header class="header">
+   <div class="non-mobile">
+      <div class="header-content ">
+         <div id="title">
+            <p>ShopNow</p>
+         </div>
+         <div class="menu">
+            <ul>
+               <li><a [routerLink]="['/store']">Products</a></li>
+               <li>About Us</li>
+               <li>FAQs</li>
+               <li>Return Policy</li>
+               <li>Contact Us</li>
+
+            </ul>
+         </div>
+         <div class="user-acc">
+            <!-- <div class="shopping">
+               <fa-icon [icon]="['fas', 'cart-shopping']"></fa-icon>
+            </div> -->
+            <a class="outer" [routerLink]="'/login'">
+               <fa-icon [icon]="['far', 'user']"></fa-icon>
+            </a>
+         </div>
+      </div>
+   </div>
+   <div class="mobile-only">
+      <div class="header-content">
+         <div id="m-title">
+            <p>ShopNow</p>
+         </div>
+         <div class="menu">
+            <!-- <div class="shopping">
+               <fa-icon [icon]="['fas', 'cart-shopping']"></fa-icon>
+            </div> -->
+            <div class="bar-button" (click)="this.activatePanel()">
+               <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+            </div>
+            <div class="collapsible" [ngClass]="{'active': showPanel}">
+               <div *ngIf="showPanel" class="user-acc">
+                  <div class="outer">
+                     <a class="user" [routerLink]="'/login'">
+                        <div class="ic-back">
+                           <fa-icon [icon]="['far', 'user']"></fa-icon>
+                        </div>
+                        <span>Account</span>
+                     </a>
+                     <div class="close_panel" (click)="activatePanel()">
+                        <fa-icon [icon]="['fas', 'close']"></fa-icon>
+                     </div>
+                  </div>
+                  <ul>
+                     <li><a class="button" routerLink="/store">Products</a></li>
+                     <li>About Us</li>
+                     <li>FAQs</li>
+                     <li>Return Policy</li>
+                     <li>Contact Us</li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</header>

@@ -1,0 +1,12 @@
+<div class="reviews">
+   <div class="top-layer">
+      <div class="reviews-title">
+         Our Customers
+      </div>
+      <div class="reviews-scroll">
+         <div class="rev-card" *ngFor="let t of text">
+            <app-review-card [rating]="t.rating" [comment]="t.comment" />
+         </div>
+      </div>
+   </div>
+</div>

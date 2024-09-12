@@ -1,0 +1,71 @@
+@use '../../../styles.scss';
+
+
+// common
+.reviews {
+  display: flex;
+  background-image: url('../../../assets/room.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+
+  .top-layer {
+    z-index: 1;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.6);
+    padding: 2rem;
+    width: 100vw;
+    
+
+    .reviews-title {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+      margin-bottom: 5rem;
+      font-size: clamp(2rem, 2vw, 5rem);
+      font-weight: 700;
+      color: styles.$secondary-color-2;
+    }
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  
+  .reviews-scroll {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .rev-card {
+      margin: 1rem;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .reviews {
+    .top-layer {
+      padding: 0;
+      height: auto;
+
+      .reviews-scroll {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        overflow-y: hidden;
+        overflow-x: auto;
+        width: 100%;
+        .rev-card {
+          flex: 0 0 auto;
+          margin: 2rem;
+          background-color: rgba(255, 255, 255, 0.6);
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "../../../../styles.scss";
+
+
+.review-card {
+   width: 320px;
+   height: 300px;
+   padding: 2rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+   align-items: center;
+   border-radius: 15px;
+
+   text-overflow: ellipsis;
+
+   .user-prof-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      fa-icon {
+         font-size: 25px;
+      }
+
+      & {
+         margin-top: 1rem;
+         margin-bottom: 1rem;
+      }
+   }
+
+   .rating {
+      font-size: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      fa-icon {
+         font-size: 1.25rem;
+         margin-right: 10px;
+      }
+   }
+}

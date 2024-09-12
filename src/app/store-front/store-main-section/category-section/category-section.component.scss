@@ -1,0 +1,41 @@
+@use "../../../../styles.scss";
+
+
+@mixin DefaultSettingForEachImmediateChild() {
+   width: calc(50% + 10px);
+   height: calc(50% + 10px);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 1rem;
+   color: styles.$secondary-color-2;
+   font-weight: 500;
+}
+
+@media screen and (min-width: 1000px) {
+   .category-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      >* {
+         @include DefaultSettingForEachImmediateChild();
+
+      }
+   }
+
+}
+
+@media screen and (max-width: 999px) {
+   .category-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100vw;
+      
+      >* {
+         @include DefaultSettingForEachImmediateChild();
+      }
+   }
+}
