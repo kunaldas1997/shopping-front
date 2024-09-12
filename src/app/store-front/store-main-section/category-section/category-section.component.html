@@ -1,32 +1,61 @@
-<div class="category-section">
-   <div class="chairs" (click)="getThisCat('Chairs')">
-      <fa-icon [icon]="['fas', 'chair']"></fa-icon>
-      <div class="sub">
-         <span>Chairs</span>
+<div class="mobile-only">
+   <div class="category-section">
+      <div class="misc" (click)="getThisCat('')">
+         <fa-icon [icon]="['fas', 'paperclip']"></fa-icon>
+         <div class="sub">
+            <span>All</span>
+         </div>
+      </div>
+      <div class="chairs" (click)="getThisCat('Chairs')">
+         <fa-icon [icon]="['fas', 'chair']"></fa-icon>
+         <div class="sub">
+            <span>Chairs</span>
+         </div>
+      </div>
+      <div class="tables" (click)="getThisCat('Tables')">
+         <fa-icon [icon]="['fas', 'table']"></fa-icon>
+         <div class="sub">
+            <span>Tables</span>
+         </div>
+      </div>
+      <div class="comp-tables" (click)="getThisCat('Computer Desks')">
+         <fa-icon [icon]="['fas', 'computer']"></fa-icon>
+         <div class="sub">
+            <span>Computers</span>
+         </div>
+      </div>
+      <div class="shelves" (click)="getThisCat('Shelves')">
+         <fa-icon [icon]="['fas', 'bars-progress']"></fa-icon>
+         <div class="sub">
+            <span>Shelves</span>
+         </div>
       </div>
    </div>
-   <div class="tables" (click)="getThisCat('Tables')">
-      <fa-icon [icon]="['fas', 'table']"></fa-icon>
-      <div class="sub">
-         <span>Tables</span>
-      </div>
-   </div>
-   <div class="comp-tables" (click)="getThisCat('Computer Desks')">
-      <fa-icon [icon]="['fas', 'computer']"></fa-icon>
-      <div class="sub">
-         <span>Computers</span>
-      </div>
-   </div>
-   <div class="shelves" (click)="getThisCat('Shelves')">
-      <fa-icon [icon]="['fas', 'bars-progress']"></fa-icon>
-      <div class="sub">
-         <span>Shelves</span>
-      </div>
-   </div>
-   <div class="misc" (click)="getThisCat('')">
-      <fa-icon [icon]="['fas', 'paperclip']"></fa-icon>
-      <div class="sub">
-         <span>Misc</span>
-      </div>
+</div>
+<div class="non-mobile">
+   <div class="category-section">
+      <fieldset>
+         <legend class="leg">Types of Products</legend>
+         <div class="all">
+            <input type="radio" name="category" id="all" (change)="getThisCat('')" [checked]="defaultVal===''">
+            <label for="all">All</label>
+         </div>
+         <div class="chairs">
+            <input type="radio" name="category" id="Chairs" (change)="getThisCat('Chairs')">
+            <label for="Chairs">Chairs</label>
+         </div>
+         <div class="tables">
+            <input type="radio" name="category" id="Tables" (change)="getThisCat('Tables')">
+            <label for="Tables">Tables</label>
+         </div>
+         <div class="comp-table">
+            <input type="radio" name="category" id="comp" (change)="getThisCat('Computer Desks')">
+            <label for="comp">Computer Table</label>
+         </div>
+         <div class="shelves">
+            <input type="radio" name="category" id="shelves" (change)="getThisCat('Shelves')">
+            <label for="shelves">Shelves</label>
+         </div>
+      </fieldset>
    </div>
 </div>

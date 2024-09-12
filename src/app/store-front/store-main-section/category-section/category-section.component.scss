@@ -2,40 +2,82 @@
 
 
 @mixin DefaultSettingForEachImmediateChild() {
-   width: calc(50% + 10px);
+
    height: calc(50% + 10px);
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
    margin: 1rem;
    color: styles.$secondary-color-2;
-   font-weight: 500;
+   font-weight: 400;
+}
+
+fieldset {
+   border: 0;
+   font-size: calc(0.65rem + 10px);
+   height: 100%;
+   legend {
+      font-weight: 600;
+   }
 }
 
 @media screen and (min-width: 1000px) {
+   .mobile-only {
+      display: none;
+   }
+
+   .non-mobile {
+      width: 10vw;
+   }
+
    .category-section {
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-start;
       align-items: center;
+      border: 1px solid styles.$secondary-color-2;
+      height: 90vh;
+      margin: 0 1rem;
+      border-radius: 10px;
 
       >* {
          @include DefaultSettingForEachImmediateChild();
+         width: calc(90% + 10px);
+         display: flex;
+         flex-direction: column;
+         justify-content: flex-start;
+         padding: 1rem;
 
+         >* {
+            margin: 1rem;
+
+            label{
+               padding: 0 0.5rem;
+               font-size: calc(0.25rem + 10px);
+               font-weight: 500;
+            }
+         }
       }
    }
 
 }
 
 @media screen and (max-width: 999px) {
+   .non-mobile {
+      display: none;
+   }
+
    .category-section {
       display: flex;
       justify-content: center;
       align-items: center;
       width: 100vw;
-      
+
       >* {
          @include DefaultSettingForEachImmediateChild();
+         width: calc(50% + 10px);
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+
       }
    }
 }

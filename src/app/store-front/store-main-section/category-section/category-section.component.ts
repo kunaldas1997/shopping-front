@@ -16,6 +16,8 @@ export class CategorySectionComponent {
   constructor(private library: FaIconLibrary, private product: AllProdsService, private storeMain: StoreMainSectionComponent) {
     library.addIcons(faChair, faTable, faComputer, faBarsProgress, faPaperclip);
   }
+
+  defaultVal: string = '';
   jsonData: any;
 
   getThisCat(category: string): void {
@@ -28,5 +30,9 @@ export class CategorySectionComponent {
       }
     });
 
+  }
+  
+  ngOnInit() {
+    this.getThisCat(this.defaultVal);
   }
 }

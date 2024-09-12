@@ -4,9 +4,9 @@
 
    .content-section {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
+      flex-direction: row;
+      justify-content: flex-start;
+      align-items: flex-start;
    
 
       .prod-list {
@@ -16,8 +16,11 @@
          
          .data-list {
             flex: 1;
-            max-height: 89vh;
             overflow-y: auto;
+            min-height: 90vh;
+            max-height: 90vh;
+            border-radius: 10px;
+            border: 1px solid styles.$secondary-color-2;
          }
       }
    }
