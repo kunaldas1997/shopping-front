@@ -1,0 +1,29 @@
+<ng-template class="error" #error>
+    <div class="message">
+        No Orders Exists
+    </div>
+</ng-template>
+
+<div class="account-data">
+    <div class="my-account">
+        <div class="account">
+            <div class="icon">
+                <fa-icon [icon]="['fas', 'user']" />
+            </div>
+            <div class="username" *ngIf="jsonData">
+                {{jsonData || 'user_123' }}
+            </div>
+        </div>
+        <div class="my-orders">
+            <div class="title">
+                <span>My Orders</span>
+            </div>
+            <div class="section" *ngIf="orderData && orderData.status==201; else error">
+                <div class="order-list" *ngFor="let order of orderData.message">
+                    <app-item [ref_id]="order.reference_id" [order_array]="order.ordered_items
+                    " [order_status]="order.status" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,12 +1,12 @@
 <div class="store-header">
-   <div class="title">
+   <div class="title" (click)="returnHome()">
       ShopNow
    </div>
    <div class="section">
-      <div class="cart-section">
+      <div class="cart-section" [routerLink]="'cart'">
          <fa-icon [icon]="['fas', 'cart-shopping']" />
       </div>
-      <div class="account-settings">
+      <div class="account-settings" (click)="myAccount()">
          <fa-icon [icon]="['fas', 'user']" />
       </div>
    </div>

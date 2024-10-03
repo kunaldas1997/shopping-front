@@ -1,0 +1,40 @@
+<ng-template class="loading" #loadingCart>
+    <div class="loading">
+        {{this.message || 'Loading...'}}
+    </div>
+</ng-template>
+
+<div class="cart">
+    <div class="page-title">
+        <span>Your Cart</span>
+    </div>
+    <div class="main-cart">
+        <div class="inner">
+            <div class="cart-data"
+                *ngIf="jsonDataCart && jsonDataCart.product_list && jsonDataCart.product_list.length; else loadingCart">
+
+                <div class="list" *ngFor="let js of jsonDataCart.product_list ">
+                    <app-item [id]="js.product.id" [product_name]="js.product.product_name"
+                        [product_price]="js.product.product_price" [count]="js.count" />
+                </div>
+            </div>
+
+            <div class="pay-now" *ngIf="jsonDataCart;">
+                <span class="title">Total Price</span>
+                <div class="pay">
+                    <span> ${{this.jsonDataCart.total_cost}}</span>
+                    <div class="btn" (click)="placeOrder()">
+                        <span>Order Now</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="order-message" *ngIf="post_order_message" [ngClass]="{'fade-in': isFadeIn, 'fade-out': isFadeOut}">
+    <div class="inner-msg">
+        {{post_order_message}}
+    </div>
+</div>

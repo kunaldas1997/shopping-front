@@ -1,13 +1,20 @@
+<ng-template class="loading" #loadingProducts>
+   <div class="loading">
+      Loading...
+   </div>
+</ng-template>
+
+
 <div class="content-section">
    <div class="category-bar">
       <app-category-section />
-      <!-- <app-filter-pane /> -->
    </div>
-   <div class="prod-list">
-      <div class="data-list" *ngIf="jsonData">
+   <div class="prod-list" *ngIf="jsonData; else loadingProducts">
+      <div class="data-list">
          <div class="ls" *ngFor="let js of jsonData ">
             <app-product-list-item [id]="js.id" [product_img]="js.product_img" [category]="js.category"
-               [product_name]="js.product_name" [description]="js.description" [seller_id]="js.seller_id" [product_price]="js.product_price"/>
+               [product_name]="js.product_name" [description]="js.description" [seller_id]="js.seller_id"
+               [product_price]="js.product_price" />
          </div>
       </div>
    </div>

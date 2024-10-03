@@ -31,6 +31,20 @@
          </div>
       </div>
    </div>
+   <div class="price-filter">
+      <div class="filter-inputs">
+         <form [formGroup]="filter">
+            <div class="input-fil">
+               <input type="text" formControlName="min" id="min" placeholder="minimum">
+               <span>to</span>
+               <input type="text" formControlName="max" id="max" placeholder="maximum">
+            </div>
+            <div class="btn" (click)="filterData()">
+               <span>Filter</span>
+            </div>
+         </form>
+      </div>
+   </div>
 </div>
 <div class="non-mobile">
    <div class="category-section">
@@ -57,5 +71,22 @@
             <label for="shelves">Shelves</label>
          </div>
       </fieldset>
+      <div class="price-filter">
+         <div class="fil-title">
+            <span>Price Filter</span>
+         </div>
+         <div class="filter-inputs">
+            <form [formGroup]="filter">
+               <div class="input-fil">
+                  <input type="text" formControlName="min" id="min">
+                  <span>to</span>
+                  <input type="text" formControlName="max" id="max">
+               </div>
+               <div class="btn" (click)="filterData()">
+                  <span>Filter</span>
+               </div>
+            </form>
+         </div>
+      </div>
    </div>
 </div>

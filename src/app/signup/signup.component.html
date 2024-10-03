@@ -2,21 +2,41 @@
    <div class="login">
       <span class="login-title">ShopNow</span>
       <form [formGroup]="signup">
+
+         <div class="user-name">
+            <label for="username">
+               <span>Username</span>
+            </label>
+            <input type="text" formControlName="user_name" id="username">
+         </div>
+
          <div class="email-section">
             <label for="email">
                <span>Email</span>
             </label>
             <input type="email" formControlName="email" id="email">
          </div>
+
          <div class="pass-section">
             <label for="pass">
                <span>Password</span>
             </label>
             <input type="password" formControlName="password" id="pass">
          </div>
+
+         <div class="account-type">
+            <label for="accountTypes">
+               Account Type:
+            </label>
+            <select id="accountTypes" formControlName="type">
+               <option *ngFor="let item of accountTypes" [value]="item.value">{{item.value}}</option>
+            </select>
+         </div>
+
          <div class="submit-btn" (click)="onSubmit()">
             Signup
          </div>
+
          <div class="signup-btn">
             <a [routerLink]="'/login'"> Have an account? Sign In!</a>
          </div>

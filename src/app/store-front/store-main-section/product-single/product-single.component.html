@@ -1,0 +1,199 @@
+<ng-template class="loading" #loading>
+   <div class="loading">
+      Loading...
+   </div>
+</ng-template>
+
+<div class="single-product">
+   <div class="product-info" *ngIf="jsonData; else loading">
+      <div class="bread-crumbs">
+         {{this.jsonData.category}} > {{this.jsonData.product_name}}
+      </div>
+
+      <div class="product-internals">
+         <div class="img-section-top">
+            <div class="img-section">
+               <div class="img-bar">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+               </div>
+               <div class="product-img">
+                  <img src="https://placehold.co/512x512" alt="place-holderimg">
+               </div>
+            </div>
+         </div>
+         <div class="product-details">
+            <div class="top">
+               <div class="product-title">
+                  <span>{{this.jsonData.product_name}}</span>
+               </div>
+               <div class="product-sub">
+                  <span>{{this.jsonData.description}}</span>
+                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                     the
+                     industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+                     and
+                     scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+                     leap
+                     into
+                     electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+                     release
+                     of
+                     Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+                     like
+                     Aldus PageMaker including versions of Lorem Ipsum.</p>
+               </div>
+               <div class="delivery-option">
+                  <span>Standard Delivery: 3-5 business days</span>
+               </div>
+            </div>
+
+            <div class="pricing-section">
+               <div class="price">
+                  <span>${{this.jsonData.product_price}}</span>
+               </div>
+               <div class="add-to-button" (click)="addToCart()">
+                  <div class="btn">
+                     <span>Add to Cart</span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="product-description">
+         <div class="heading">
+            <span>Description</span>
+         </div>
+         <div class="product-title">
+            <span>{{this.jsonData.product_name}}</span>
+         </div>
+         <div class="product-desc">
+            <span>{{this.jsonData.description}}</span>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+               scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+               into
+               electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+               release
+               of
+               Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+               like
+               Aldus PageMaker including versions of Lorem Ipsum.</p>
+         </div>
+         <div class="img-desc">
+            <img src="https://placehold.co/512x150" alt="img-banner1" srcset="">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+               scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+               into
+               electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+               release
+               of
+               Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+               like
+               Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <img src="https://placehold.co/1020x150" alt="img-banner2" srcset="">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+               industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+               scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+               into
+               electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+               release
+               of
+               Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+               like
+               Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <img src="https://placehold.co/1000x150" alt="img-banner3" srcset="">
+         </div>
+      </div>
+   </div>
+</div>
+<div class="single-product-mobile">
+   <div class="product-info" *ngIf="jsonData; else loading">
+      <div class="bread-crumbs">
+         {{this.jsonData.category}} > {{this.jsonData.product_name}}
+      </div>
+
+      <div class="product-internals">
+         <div class="prod-section-top">
+            <div class="img-section">
+               <div class="product-img">
+                  <img src="https://placehold.co/512x512" alt="place-holderimg">
+               </div>
+               <div class="img-bar">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+                  <img src="https://placehold.co/50x50" alt="place-holderimg">
+               </div>
+            </div>
+            <div class="product-details">
+               <div class="top">
+                  <div class="product-title">
+                     <span>{{this.jsonData.product_name}}</span>
+                  </div>
+               </div>
+               <div class="delivery-option">
+                  <span>Standard Delivery: 3-5 business days</span>
+               </div>
+               <div class="pricing-section">
+                  <div class="price">
+                     <span>${{this.jsonData.product_price}}</span>
+                  </div>
+                  <div class="add-to-button" (click)="addToCart()">
+                     <div class="btn" >
+                        <span>Add to Cart</span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="product-description">
+         <div class="heading">
+            <span>Description</span>
+         </div>
+         <div class="product-title">
+            <span>{{this.jsonData.product_name}}</span>
+         </div>
+      </div>
+      <div class="product-desc">
+         <span>{{this.jsonData.description}}</span>
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+      </div>
+      <div class="img-desc">
+         <img src="https://placehold.co/512x150" alt="img-banner1" srcset="">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+         <img src="https://placehold.co/1020x150" alt="img-banner2" srcset="">
+         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release
+            of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+            Aldus PageMaker including versions of Lorem Ipsum.</p>
+         <img src="https://placehold.co/1000x150" alt="img-banner3" srcset="">
+      </div>
+   </div>
+</div>

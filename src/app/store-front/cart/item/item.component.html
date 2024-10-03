@@ -1,0 +1,22 @@
+<div class="item">
+    <div class="img">
+        <img src="https://placehold.co/100x100" alt="" srcset="">
+    </div>
+    <div class="prod-det">
+        <div class="prod">
+            <div class="item-title">
+                <span>{{this.product_name}}</span>
+            </div>
+            <div class="price">
+                <span>${{this.product_price}}</span>
+            </div>
+        </div>
+        <div class="count-data">
+            <div class="count">
+                <div class="remove" (click)="remove()">-</div>
+                <span>{{this.count}}</span>
+                <div class="add" (click)="add()">+</div>
+            </div>
+        </div>
+    </div>
+</div>

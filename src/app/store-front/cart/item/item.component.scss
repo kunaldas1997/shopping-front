@@ -1,0 +1,75 @@
+@use "../../../../styles.scss";
+
+
+.item {
+    margin: 0.75rem 0;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+   
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 10px;
+
+    .img {
+        img {
+            border-radius: 10px;
+        }
+    }
+
+    .prod-det {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin: 0 0.5rem;
+
+        .prod {
+            .item-title {
+                font-weight: 700;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+            }
+
+            .price {
+                font-weight: 500;
+                margin-top: 0.5rem;
+                margin-left: 0.5rem;
+            }
+        }
+
+        .count-data {
+            .count {
+                margin-top: 0.1rem;
+                margin-left: 0.5rem;
+                display: flex;
+
+                >* {
+                    margin: 0 0.3rem;
+                    border: 1px solid styles.$secondary-color-2;
+                    width: 16px;
+                    height: 16px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0.3rem;
+                }
+
+                .add {
+                    border-radius: 10px;
+                    background-color: styles.$secondary-color-2;
+                    color: styles.$primay-color-1;
+                }
+
+                .remove {
+                    border-radius: 10px;
+                    background-color: styles.$secondary-color-2;
+                    color: styles.$primay-color-1;
+                }
+                
+            }
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+@use "../../../../styles.scss";
+
+
+.order-item {
+    width: 100%;
+    border: 1px solid styles.$secondary-color-2;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    .order-ref-stat {
+        background-color: styles.$secondary-color-2;
+        border-top-right-radius: 9px;
+        border-top-left-radius: 9px;
+        padding: 1rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: styles.$primay-color-1;
+    }
+
+    .order-array {
+        padding: 1rem;
+
+        .prod {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 1rem;
+            
+            .prod-img {
+                width: auto;
+            }
+            .order-content {
+                margin-left: 1rem;
+                margin-bottom: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: flex-start;
+
+            }
+
+        }
+    }
+}

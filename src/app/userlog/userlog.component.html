@@ -14,11 +14,22 @@
             </label>
             <input type="password" formControlName="password" id="pass">
          </div>
+         <div class="account-type">
+            <label for="options">
+               Account Type:
+            </label>
+            <select id="accountTypes" formControlName="type">
+               <option *ngFor="let item of accountTypes" [value]="item.value">{{item.value}}</option>
+            </select>
+         </div>
          <div class="submit-btn" (click)="onSubmit()">
             Login
          </div>
          <div class="signup-btn">
             <a [routerLink]="'/signup'"> Don't have account? Sign Up!</a>
+         </div>
+         <div class="message">
+            {{this.message}}
          </div>
       </form>
    </div>

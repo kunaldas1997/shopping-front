@@ -5,13 +5,19 @@
    padding: 1rem;
    display: flex;
    flex-direction: row;
-   
+
+   .img {
+      img {
+         border-radius: 10px;
+      }
+   }
 
    .prod-det {
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
       width: 100%;
+
       .prod-title {
          font-weight: 700;
          margin-top: 0.5rem;

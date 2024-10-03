@@ -7,7 +7,7 @@ import { FilterPaneComponent } from "./filter-pane/filter-pane.component";
 
 
 export interface Product {
-  id?: string;
+  id: string;
   product_name: string;
   description: string;
   product_price: number;
@@ -26,13 +26,14 @@ export interface Product {
 export class StoreMainSectionComponent {
 
   constructor(private product: AllProdsService) { }
+
   jsonData: Product[] = [];
 
   getData(): void {
+
     this.product.getProducts("product").subscribe({
       next: (data: Product[]) => {
         this.jsonData = data;
-        console.log(this.jsonData);
       },
       error: (err) => {
         console.log(err.message, err.status);
